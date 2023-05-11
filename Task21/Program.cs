@@ -45,8 +45,14 @@ double Distance(int x1, int y1, int z1, int x2, int y2, int z2)
 // }
 
 // Вариант2
+// {
+// double sumcatet = Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2);
+// double distance = Math.Sqrt(sumcatet);
+// return distance;
+// }
+
+// Вариант 3
 {
-double sumcatet = Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2);
-double distance = Math.Sqrt(sumcatet);
-return distance;
+     double distance = Math.Sqrt (Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2) + Math.Pow((z2 - z1), 2));
+     return distance;
 }
