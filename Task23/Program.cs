@@ -30,3 +30,5 @@ void Cube(int num)
         count++;
     }
 }
+
+ 
