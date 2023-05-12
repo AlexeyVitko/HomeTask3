@@ -14,23 +14,35 @@
 Console.WriteLine("Введите пятизначное число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if ((number > 9999 && number < 100000) || (number < -99999 && number > -100000));
+bool palidrom = Palidrom(number);
+if (palidrom==true)
+{
+    Console.WriteLine($"число {number} -> является палиандром ");
+}
+else
+{
+    Console.WriteLine($"число {number} -> Не является палиандром  ");
+}
+
+if ((number > 9999 && number < 100000) || (number < -9999 && number > -100000))
 {
     Console.WriteLine($"число {number} -> является пятизначным ");
 }
 else
 {
-     Console.WriteLine($"число {number} -> является пятизначным ");
-     Console.WriteLine("Введите новое число");
+    Console.WriteLine($"число {number} -> Не является пятизначным ");
+    Console.WriteLine("Введите новое число");
 }
-// // int palidrom = palidrom(number);
-// // Console.WriteLine($"{number} -> является палидромом");
 
-// // bool Palidrom(int num)
-// // {
-// //     int digit1 = num / 10000;
-// //     int digit2 = num / 1000 % 10;
-// //     int digit4 = num / 100 % 10;
-// //     int digit5 = num % 10;
-// //     return digit1 == digit5 && digit2 == digit4 ? true : false;
-// }
+bool Palidrom(int num)
+{
+    int digit1 = num / 10000;
+    Console.WriteLine(digit1);
+    int digit2 = num / 1000 % 10;
+    Console.WriteLine(digit2);
+    int digit4 = num % 100 /10;
+    Console.WriteLine(digit4);
+    int digit5 = num % 10;
+    Console.WriteLine(digit5);
+    return digit1 == digit5 && digit2 == digit4 ? true : false;
+}
