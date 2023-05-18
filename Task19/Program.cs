@@ -18,7 +18,7 @@ bool palidrom = Palidrom(number);
 if (palidrom==true)
 {
     Console.WriteLine($"число {number} -> является палиандром ");
-}
+} 
 else
 {
     Console.WriteLine($"число {number} -> Не является палиандром  ");
